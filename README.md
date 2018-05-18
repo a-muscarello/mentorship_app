@@ -53,22 +53,22 @@ Ambika:
 Created a Github repository for the project, added collaborators.
 Created a chat room database.
 Compile the README page.
-
 Used JavaScript to change background colors of main div (Later discarded to accommodate new design)
 Responsible for creating Github repository and merging pull requests.
 Danielle:
 Drew out a framework for the database Entity Relationship Diagram (ERD) with the various relationships in place.
 Added Devise for authentication.
-Created Gym name and removed unused elements
 Francis:
 Drew the wireframe out in Photoshop.
 Design the style and look for the app.
 
 Features:
-Spotlight created only using CSS to resemble an arena
+
 Stats appear when Pokémon image is hovered over
 Navigational arrow buttons
 Materialize Preloader shows when AJAX calls are being made
-Acknowledgements
-Pokémon GAME BOY Font by Superpencil
-Animated Spotlight by Envato Tuts
+
+Acknowledgements:
+Photoshop
+Bootstrap
+
