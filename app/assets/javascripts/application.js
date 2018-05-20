@@ -13,4 +13,20 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery
+//= require jquery_ujs
+//= require jquery.turbolinks
+//= require bootstrap
 //= require_tree .
+
+
+
+$(document).on("ready page:change", function() {
+
+    $('.navbar .dropdown').hover(function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideDown("fast");
+    }, function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp("fast")
+    });
+
+});
