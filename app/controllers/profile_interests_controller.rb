@@ -42,4 +42,3 @@ class ProfileInterestsController < ApplicationController
     # end
 
 end
-
