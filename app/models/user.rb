@@ -5,4 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :profile_interest
+
+  # has_one :profile
+  # after_create :build_profile
+
+  # def build_profile
+  #   Profile.create(user: self)
+  # end
 end

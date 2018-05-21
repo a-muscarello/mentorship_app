@@ -1,0 +1,56 @@
+
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @user, remote: true do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      # <%= f.label :first_name %>
+      # <%= f.text_field :first_name, class: 'form-control' %>
+
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :user_id %>
+      <%= f.text_field :user_id %>
+
+      # <%= f.label :password_confirmation, "Confirmation" %>
+      # <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+# <div class="user_table-">
+#     <h1>New User</h1>
+
+#     <%= render 'form', user: @user %>
+
+#     <%= link_to 'Back', users_path %>
+# </div>

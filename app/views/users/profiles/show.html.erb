@@ -1,0 +1,15 @@
+
+<div>hello, <%= @user.first_name %></div>
+
+# show location of user
+
+<div>Blurb about - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+    
+<div>User Name: <%= @user.username %></div>
+
+# <div>User ID: <%= @user.user_id %></div>
+
+
+<%= link_to "Edit", edit_user_path(@user) %>
+<%= link_to "Delete", user_path(@user), remote: true, method: :delete, data: { confirm: 'Are you sure?' } %>
+
