@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-    
+
     root 'users#home'
-    get 'users/profile', to: 'users#profile' 
+    get 'users/profile', to: 'users#profile'
 
     devise_for :users, controllers: {
         sessions: 'users/sessions',
@@ -10,7 +10,11 @@ Rails.application.routes.draw do
     }
 
     resources :profile_interests
+    resources :chat_rooms, only: [:new, :create, :show, :index]
+    resources :private_chat_rooms, only: [:new, :create, :show, :index]
+    resources :connections, only: [:new, :create, :show, :edit, :update, :index]
 
+    mount ActionCable.server => '/cable'
 
     # namespace :profile_interest do
     #     root to: "profile_interests#index"
