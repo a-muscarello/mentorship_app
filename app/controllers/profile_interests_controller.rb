@@ -1,44 +1,49 @@
+
 class ProfileInterestsController < ApplicationController
-
-    before_action :find_user, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user!, except: [:index, :show]
-
+    
     def index
-        @user = ProfileInterest
+        @interests = ProfileInterest.create(:user_id => current_user.id)
     end
 
     def show
-        @user = ProfileInterest.where(user_id :current_user.id)
+        @interests = ProfileInterest.find(params[:id])
     end
-
+    
+    def new
+        @interests = ProfileInterest.new
+    end
+    
+    def create
+        @interests = ProfileInterest.new(interests_params)
+        @interests.save
+        # redirect_to "/profile_interests/#{@interests.id}/"
+        # redirect_to "/users/profile"
+    end
+    
     def edit
-        @user = ProfileInterest.find(params[:id])
+        @interests = ProfileInterest.find(params[:id])
     end
-
+    
     def update
-        @user = ProfileInterest.find(params[:id])
-        @user.update(user_params)
-        redirect_to '/show'
+        @interests = ProfileInterest.find(params[:id])
+        @interests.update(interests_params)
+        redirect_to "/users/profile"
     end
-
+    
     def destroy
-        @user = ProfileInterest.find(params[:id])
-        @user.delete
-        redirect_to '/home'
+        @interests = ProfileInterest.find(params[:id])
+        @interests.destroy
+        redirect_to "/profile_interests"
     end
 
-    private
 
-    def find_user
-        @user = ProfileInterest.find(params[:id])
+
+
+    private 
+
+    def interests_params 
+        params.require(:profile_interest).permit(:user_id, :python, :rails, :react, :node_js, :sql, :blockchain, :data_scraping, :javascript, :java, :scss, :mentee, :mentor)
     end
-
-    def user_params
-        params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :user_id)
-    end
-
-    # def user_params
-    #     params.require(:user).permit(:first_name, :last_name, :username, :email, :encrypted_password, :avatar, :about, :mentor_id) / or :mentee_id
-    # end
 
 end
+

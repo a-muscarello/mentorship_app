@@ -1,0 +1,20 @@
+
+h2 {
+    padding: 25px;
+}
+
+.devise_shared_links {
+    margin-top: 50px;
+    margin-left: 25px;
+    text-align: center;
+    a {
+        font-size: .75em;
+        // font-weight: bold;
+        color: blue;
+        display: inline;
+        margin-right: 25px;
+        &:hover {
+            color: firebrick;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+
+<h2>Tell Us About Your Interests</h2>
+
+<div class="background">
+    <div class="container">
+        <div class="interests_form">
+            <%= bootstrap_form_for @interests do |f| %>
+    
+                <div class="interests">
+                    <h2>You're into... (check all that apply)</h2>
+                    <%= f.radio_button :python, true, label: "Python" %>
+                    <%= f.radio_button :javascript, true, label: "JavaScript" %>
+                    <%= f.radio_button :react, true, label: "React" %>
+                    <%= f.radio_button :rails, true, label: "Rails" %>
+                    <%= f.radio_button :sql, true, label: "SQL" %>
+                    <%= f.radio_button :java, true, label: "Java" %>
+                    <%= f.radio_button :node_js, true, label: "NodeJS" %>
+                    <%= f.radio_button :scss, true, label: "Sass & SCSS" %>
+                    <%= f.radio_button :data_scraping, true, label: "Data Scraping" %>
+                    <%= f.radio_button :blockchain, true, label: "Blockchain" %>
+                </div>
+    
+                <div class="interests">
+                    <h2>You want to... (check all that apply)</h2>
+                    <%= f.radio_button :mentor, true, label: "Mentor" %>
+                    <%= f.radio_button :mentee, true, label: "Be Mentored" %>
+                </div>
+            
+                <%= f.submit "save your interests", :class => "save_interests btn-sm btn-success" %>
+            <% end %>
+        </div>
+    </div>
+</div>
