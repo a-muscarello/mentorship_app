@@ -1,0 +1,27 @@
+
+.registration_form {
+    width: 50%;
+    float: right;
+    padding-bottom: 100px;
+}
+
+.interests_form {
+    width: 80%;
+    float: right;
+    padding-bottom: 100px;
+    .interests {
+        display: inline-block;
+        padding: 50px 10px;
+        padding-top: 25px;
+        h2 {
+            font-size: 1.3em;
+            padding-left: 0;
+        }
+        .save_interests {
+            clear: both;
+            display: block;
+            margin-top: 25px;
+        }
+    }
+}
+
