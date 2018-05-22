@@ -28,6 +28,7 @@ Designing a mentorship app, that would allow mentors to provide their services t
 
 
 Utilizes:
+Action Cable
 AJAX
 jQuery
 Bootstrap
@@ -45,22 +46,24 @@ Collectively:
 Discussed the project scope and drew up a checklist listing tasks to be completed, assigning same tasks and drew up datelines.
 Created a user flow of how the app will look. 
 
-
 Incorporated and made adjustments to spotlight code to work with existing elements
 Used Flexbox within Flexbox to correctly align elements to work across a variety of viewport widths
 
 Ambika:
-Created a Github repository for the project, added collaborators.
-Created a chat room database.
-Compile the README page.
+Created a Github repository for the project and added collaborators.
+Created a profile interest database.
+Compiled the README.
+
 Used JavaScript to change background colors of main div (Later discarded to accommodate new design)
 Responsible for creating Github repository and merging pull requests.
 Danielle:
 Drew out a framework for the database Entity Relationship Diagram (ERD) with the various relationships in place.
 Added Devise for authentication.
+Integrated Action Cable into the project as the server-side code to broadcast content to a subscriber; in essence creating and adding the entire chat functionality to the app.
 Francis:
-Drew the wireframe out in Photoshop.
-Design the style and look for the app.
+Transferred the wireframe to Photoshop and created mock-ups.
+Designed the style and look for the app.
+Created the landing, other user and profile pages.
 
 Features:
 
