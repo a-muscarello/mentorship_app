@@ -1,2 +1,9 @@
-<h1>ChatRooms#new</h1>
-<p>Find me in app/views/chat_rooms/new.html.erb</p>
+<h1>Ask New Question</h1>
+
+<%= form_for @chat_room do |f| %>
+    <div class="form-group">
+        <%= f.text_field :title, autofocus: true, class: 'form-control' %>
+    </div>
+
+    <%= f.submit "Ask!", class: 'btn btn-primary' %>
+<% end %>

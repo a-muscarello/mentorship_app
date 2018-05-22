@@ -1,2 +1,20 @@
-<h1>PrivateChatRooms#show</h1>
-<p>Find me in app/views/private_chat_rooms/show.html.erb</p>
+<%= link_to "Back to Home", private_chat_rooms_path %>
+<% if can_see?(@private_chat_room) %>
+    <h1><%= @private_chat_room.title %></h1>
+
+    <div id="private_messages" data-private-chat-room-id="<%= @private_chat_room.id %>">
+        <%= render @private_chat_room.private_messages %>
+    </div>
+
+    <hr>
+
+    <%= form_for @private_message, url: '#' do |f| %>
+        <%= hidden_field_tag 'private_chat_room_id', @private_chat_room.id %>
+        <div class="form-group">
+            <%= f.text_area :body, class: 'form-control' %>
+            <small class="text-muted">From 2 to 1000 characters</small>
+        </div>
+
+        <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
+    Con<% end %>
+<% end %>

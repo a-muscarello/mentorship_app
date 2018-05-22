@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-block">
+        <div class="row">
+            <div class="col-md-1">
+                <%= gravatar_for private_message.user %>
+            </div>
+            <div class="col-md-11">
+                <p class="card-text">
+                    <span class="text-muted"><%= private_message.user.name %> at <%= private_message.timestamp %> says</span><br>
+                    <%= private_message.body %>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
