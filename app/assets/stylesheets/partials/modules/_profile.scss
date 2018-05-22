@@ -1,0 +1,26 @@
+
+.user_info {
+    width: 600px;
+    margin: 50px;
+
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.user_info {
+    .profile_avatar {
+        border-radius: 50px;
+    }
+    ul {
+        list-style: none;
+        margin-top: 0   px;
+        .real_name {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .username {
+            color: magenta;
+        }
+    }
+}
+
