@@ -14,6 +14,7 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery
+//= require cable
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require bootstrap

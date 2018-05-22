@@ -1,0 +1,9 @@
+<h1>Ask New Question</h1>
+
+<%= form_for @chat_room do |f| %>
+    <div class="form-group">
+        <%= f.text_field :title, autofocus: true, class: 'form-control' %>
+    </div>
+
+    <%= f.submit "Ask!", class: 'btn btn-primary' %>
+<% end %>
