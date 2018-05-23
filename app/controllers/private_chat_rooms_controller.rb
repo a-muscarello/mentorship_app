@@ -1,7 +1,7 @@
 class PrivateChatRoomsController < ApplicationController
     def index
         @users = User.all
-        @connections = ConnectionRequest.where(other_user_id: current_user.id, status: "accept")
+        @connections = ConnectionRequest.where(other_user_id: current_user.id, state: "accept")
         @private_chat_rooms = PrivateChatRoom.where(user_id: current_user.id).or(PrivateChatRoom.where(other_user_id: current_user.id))
     end
 

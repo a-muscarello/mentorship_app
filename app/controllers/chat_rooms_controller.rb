@@ -3,11 +3,11 @@ class ChatRoomsController < ApplicationController
         @chat_rooms = ChatRoom.all
         @users = User.all
         @connection_request = ConnectionRequest.new
-           @connections = ConnectionRequest.where(other_user_id: current_user.id, status: "pending")
-           @requests = ConnectionRequest.where(user_id: current_user.id, status: "pending")
-           @private_chat_room = PrivateChatRoom.new
-           @private_chat_rooms = PrivateChatRoom.all
-       end
+        @connections = ConnectionRequest.where(other_user_id: current_user.id, state: "pending")
+        @requests = ConnectionRequest.where(user_id: current_user.id, state: "pending")
+        @private_chat_room = PrivateChatRoom.new
+        @private_chat_rooms = PrivateChatRoom.all
+     end
 
        def new
            @chat_room = ChatRoom.new
