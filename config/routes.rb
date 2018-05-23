@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :profile_interests
     resources :chat_rooms, only: [:new, :create, :show, :index]
     resources :private_chat_rooms, only: [:new, :create, :show, :index]
-    resources :connections, only: [:new, :create, :show, :edit, :update, :index]
+    resources :connection_requests, only: [:new, :create, :show, :edit, :update, :index]
 
     mount ActionCable.server => '/cable'
 
