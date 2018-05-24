@@ -1,10 +1,14 @@
-<%= link_to "Back to Home", chat_rooms_path %>
-<div class="row">
-    <div class="col-sm-6">
-        <h4>Private Chat Rooms</h4>
 
-        <table>
+<div class="thread_intro private_chat_intro">
+    <button class="btn btn-sm btn-outline-dark back_to_home"><%= link_to "Back to Home", chat_rooms_path %></button>
+    <h4>keep the conversation going...</h4>
+</div>
+
+<div class="container private_chat_list_container">
+    <div class="convo_list">
+        <ul class="private_chat_list">
             <%= render @private_chat_rooms %>
-        </table>
+        </ul>
     </div>
+    <img src="/assets/mentorship_flower.jpg" alt="mentorship flower">
 </div>

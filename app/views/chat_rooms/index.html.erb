@@ -3,38 +3,9 @@
 
         <%# private conversations %>
         <div id="private_convo">
-            <h4><%= link_to "your private conversations", private_chat_rooms_path %></h4>
-
-            <div class="">
-                <h5>Requests</h5>
-                <table>
-                    <% @connections.each do |connection| %>
-                    <tr>
-                        <% name = User.find(connection.user_id).username %>
-                        <td><%= name %></td>
-                            <td><%= bootstrap_form_for(connection) do |f| %>
-                                <%= f.select :state, ["accept", "reject"] %>
-                                <%= f.hidden_field :user_id, :value => connection.user_id %>
-                                <%= f.hidden_field :other_user_id, :value => current_user.id %>
-                                <%= f.submit "Submit" %>
-                            <% end %>
-                        </td>
-                    </tr>
-                    <% end %>
-                </table>
+            <div  class="private_link">
+                <h5><%= link_to "=> your private conversations <=", private_chat_rooms_path %></h5>
             </div>
-
-            <h5>Requested</h5>
-            <table>
-                <% @requests.each do |request| %>
-                <tr>
-                    <% name = User.find(request.other_user_id).username %>
-                    <td><%= name %></td>
-                    <td><%= request.state %></td>
-                </tr>
-                <% end %>
-            </table>
-            
 
             <div id="connect">
                 <h3>Start a conversation</h3>
@@ -43,21 +14,53 @@
                     <%= f.collection_select :other_user_id, @users, :id, :username, prompt: true %>
                     <%= f.hidden_field :user_id, :value => current_user.id %>
                     <%= f.hidden_field :state, :value => "pending" %>
-                    <%= f.submit "invite", :class => "invite_btn btn btn-sm btn-warning"  %>
+                    <%= f.submit "invite", :class => "invite_btn btn btn-sm btn-outline-light"  %>
                 <% end %>
+            </div>
+
+            <div id="requested_by">
+                <h5>you've been requested by...</h5>
+                <ul>
+                    <% @connections.each do |connection| %>
+                    <li>
+                        <% name = User.find(connection.user_id).username %>
+                        <div><%= name %></div>
+                        <div class="choice"><%= bootstrap_form_for(connection) do |f| %>
+                                <%= f.select :state, ["accept", "reject"] %>
+                                <%= f.hidden_field :user_id, :value => connection.user_id %>
+                                <%= f.hidden_field :other_user_id, :value => current_user.id %>
+                                <%= f.submit "let them know", class: "btn btn-sm btn-outline-dark request_submit" %>
+                            <% end %>
+                        </div>
+                    </li>
+                    <% end %>
+                </ul>
+            </div>
+
+            <div id="requested">
+                <h5>you've requested...</h5>
+                <ul>
+                    <% @requests.each do |request| %>
+                    <li>
+                        <% name = User.find(request.other_user_id).username %>
+                        <div><%= name %></div>
+                        <div class="status"><%= request.state %></div>
+                    </li>
+                    <% end %>
+                </ul>
             </div>
         </div>
 
         <%# message board %>
         <div id="message_board">
-            <h1>Hello <%= current_user.first_name %>, Join The Conversation</h1>
+            <h3>Hello <%= current_user.first_name %>, join the conversation</h3>
 
             <%= form_for @chat_room do |f| %>
                 <div class="form-group">
                     <%= f.text_field :title, autofocus: true, class: 'ask form-control', id: "question_input", placeholder: "what's your question" %>
                 </div>
 
-                <%= f.submit "ask the MentorMe community", class: 'ask-btn btn btn-primary' %>
+                <%= f.submit "ask the MentorMe community", class: 'ask-btn btn btn-success' %>
             <% end %>
 
             <div id="questions_list">

@@ -1,6 +1,9 @@
-<h2>Register Your Account</h2>
-
-<div class="container">
+    
+<div class="container registration_container">
+    <div class="registration_prompt">
+        <h2>Register Your Account</h2>
+        <img id="sun_plant" src="/assets/sun_plant.png" alt="plant with sun">
+    </div>
     <div class="registration_form">
         <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= devise_error_messages! %>

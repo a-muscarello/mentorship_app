@@ -1,8 +1,16 @@
 
+#sun_plant {
+    margin-top: 100px;
+    margin-left: 75px;
+}
+
 .registration_form {
+    // position: absolute;
     width: 50%;
+    clear: both;
     float: right;
     padding-bottom: 100px;
+    transform: translateY(-300px)
 }
 
 .interests_form {

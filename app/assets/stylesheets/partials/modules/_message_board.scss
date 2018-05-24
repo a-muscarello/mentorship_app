@@ -1,23 +1,41 @@
 
 #message_board_container {
     padding: 25px;
-    background: #999;
+    // background: #999;
     height: 100vh;
 }
 
 #private_convo {
     position: fixed;
-    top: 85px;
-    left: 15px;
-    padding: 25px;
-    border-radius: 25px;
-    background: rgb(68, 240, 171);
-    #connect {
-        margin: 50px 0px;
-        padding: 30px 15px;
-        background: #fff;
+    top: 0;
+    left: 0;
+    width: 28%;
+    height: 100vh;
+    overflow: scroll;
+    // padding: 25px;
+    padding-top: 85px;
+    // border-radius: 25px;
+    // background: rgb(68, 240, 171);
+    // background: rgb(36, 245, 147);
+    background: rgb(101, 247, 191);
+    text-align: center;
+    .private_link {
         text-align: center;
-        border-radius: 15px;
+        a {
+            text-decoration: none;
+            color: #999;
+            &:hover {
+                color: #444;
+            }
+        }
+        
+    }
+    #connect {
+        margin-top: 25px;
+        padding: 20px 15px;
+        background: rgb(10, 124, 73);
+        text-align: center;
+        // border-radius: 15px;
         * {
             text-transform: lowercase;
         }
@@ -25,29 +43,94 @@
     label {
         display: block;
     }
+    #requested_by {
+        padding-top: 25px;
+        // background: rgb(0, 255, 110);
+        background: rgb(36, 245, 147);
+        ul {
+            width: 100%;
+            list-style: none;
+            text-align: left;
+            padding-left: 0;
+            padding-bottom: 0;
+            margin-top: 25px;
+            li {
+                width: 100%;
+                padding: 15px 25px;
+                background: rgba(255, 255, 255, .4);
+                &:hover {
+                    background: rgba(255, 255, 255, 1);
+                }
+                * {
+                    display: inline;
+                }
+                label {
+                    display: none;
+                }
+                .choice {
+                    float: right;
+                }
+                select {
+                    width: 75px;
+                    margin-left: 5px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+    #requested {
+        padding: 25px 0px;
+        // background: rgb(101, 247, 191);
+        background: rgba(255, 255, 255, .4);
+        ul {
+            width: 100%;
+            list-style: none;
+            text-align: left;
+            padding-left: 0;
+            padding-bottom: 0;
+            margin-top: 25px;
+            li {
+                width: 100%;
+                padding: 10px 25px;
+                background: rgba(255, 255, 255, .4);
+                &:hover {
+                    background: rgba(255, 255, 255, 1);
+                }
+                * {
+                    display: inline;
+                }
+                .status {
+                    float: right;
+                    margin-left: 25px;
+                    color: #999;
+                }
+            }
+        }
+    }
 }
 
 #message_board {
     overflow-y: auto;
     position: fixed;
-    top: 75px;
+    top: 25px;
     right: 15px;
     width: 70%;
     height: 100%;
-    background: rgb(178, 245, 218);
+    // background: rgb(178, 245, 218);
     padding: 25px;
     border-radius: 25px;
-    h1 {
+    h3 {
         text-align: center;
         margin: 25px;
-        color: #fff;
+        color: rgb(3, 250, 86);
+        // color: #444;
         // opacity: .6;
     }
     #question_input {
         margin-top: 25px;
         padding:25px;
         width: 100%;
-        border-radius: 15px;
+        border-radius: 5px;
         font-size: 1.5em;
     }
     #questions_list {
@@ -63,9 +146,12 @@
                 tr {
                     width: 100%;
                     padding: 10px;
-                    background: rgba(255, 230, 230, .7);
+                    border: 1px solid #444;
+                    // background: rgba(255, 230, 230, .7);
                     &:hover {
-                        background: rgba(255, 230, 230, 1);
+                        // background: rgba(255, 230, 230, 1);
+                        // background: rgb(144, 247, 196);
+                        background: rgb(238, 253, 246);
                     }
                     h4 {
                         padding: 25px;

@@ -1,19 +1,25 @@
-<%= link_to "Back to Home", chat_rooms_path %>
 
-<h1><%= @chat_room.title %></h1>
-
-<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-    <%= render @chat_room.messages %>
+<div class="thread_page_container">
+    <div class="thread_intro">
+        <button class="btn btn-sm btn-outline-dark back_to_home"><%= link_to "Back to Home", chat_rooms_path %></button>
+        <h1 class="thread_question"><%= @chat_room.title %></h1>
+    </div>
+    
+    <div class="container single_public_thread_container">
+        <%= form_for @message, url: '#' do |f| %>
+            <%= hidden_field_tag 'chat_room_id', @chat_room.id %>
+            <div class="form-group">
+                <%= f.text_area :body, class: 'form-control answer_text', placeholder: "your answer" %>
+                <small class="text-muted">From 2 to 1000 characters</small>
+            </div>
+        
+          <%= f.submit "post your answer", class: 'btn btn-sm btn-success answer_btn' %>
+        <% end %>
+        
+        <hr>
+    
+        <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+            <%= render @chat_room.messages %>
+        </div>
+    </div> 
 </div>
-
-<hr>
-
-<%= form_for @message, url: '#' do |f| %>
-    <%= hidden_field_tag 'chat_room_id', @chat_room.id %>
-    <div class="form-group">
-        <%= f.text_area :body, class: 'form-control' %>
-        <small class="text-muted">From 2 to 1000 characters</small>
-  </div>
-
-  <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
-<% end %>

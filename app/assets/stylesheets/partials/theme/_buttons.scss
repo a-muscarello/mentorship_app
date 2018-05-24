@@ -1,5 +1,40 @@
 
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-outline:0px !important;
+    -moz-outline:0px !important;
+    -o-outline:0px !important;
+
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -o-appearance:none;
+
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+}
+
+
 .login_button {
+    padding: 5px 25px;
+}
+
+.sign_in_btn {
+    margin-top: 25px;
     padding: 5px 25px;
 }
 
@@ -26,6 +61,21 @@
 .invite_btn {
     padding: 2px 35px;
     margin-left: 15px;
-    color: #fff;
+    // color: #fff;
     font-weight: bold;
+}
+
+// single public thead
+.answer_btn {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.request_submit {
+    margin-left: 10px;
+}  
+
+.private_send_button {
+    padding: 2px 25px;
+    margin-left: 25px;
 }

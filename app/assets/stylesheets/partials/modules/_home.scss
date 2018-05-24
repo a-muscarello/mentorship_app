@@ -8,6 +8,7 @@
 .background {
     width: 100vw;
     height: 100vh;
+    transform: translateY(-55px);
     background: rgb(192, 192, 192);
     position: absolute;
     z-index: -10000;
@@ -37,7 +38,12 @@
     text-align: right;
     padding-top: 200px;
     padding-right: 25px;
+    color: #666;
     span {
-        color: salmon;
+        color: rgb(25, 87, 2);
+        font-size: 1.5em;
+        font-weight: bold;
+        letter-spacing: 3px;
+        transform: translateX(10px);
     }
 }

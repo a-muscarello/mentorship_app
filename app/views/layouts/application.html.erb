@@ -4,6 +4,8 @@
     <title>MentorshipApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -35,7 +37,7 @@
                 <% else %>
 
                   <li class="nav-item login_form">
-                      <a href="/users/sign_in"><button class="btn btn-sm btn-outline-dark login_button">login</button></a>
+                      <a href="/users/sign_in"><button class="btn btn-sm btn-outline-dark login_button">sign in</button></a>
                   </li>
 
                 <% end %>
