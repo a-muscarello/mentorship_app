@@ -26,8 +26,7 @@ class ProfileInterestsController < ApplicationController
     def update
         @interests = ProfileInterest.find(params[:id])
         @interests.update(interests_params)
-        redirect_to users_profile_path
-        redirect_to "/users/profile"
+        redirect_to chat_rooms_path # users_profile_path
     end
 
     def destroy
