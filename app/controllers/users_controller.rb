@@ -12,8 +12,8 @@ class UsersController < ApplicationController
     def profile
         @user = current_user
         @interests = ProfileInterest.where(:user_id => current_user.id)
-        @mentor = ProfileInterest.where(:mentor => true)
-        @mentee = ProfileInterest.where(:mentee => true)
+        @mentors = ProfileInterest.where(:mentor => true)
+        @mentees = ProfileInterest.where(:mentee => true)
         @users = User.all
     end
 

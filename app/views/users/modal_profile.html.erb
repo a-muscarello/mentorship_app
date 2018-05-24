@@ -1,0 +1,45 @@
+
+<h1>User's Profile!</h1>
+
+<div>
+    <ul>
+        
+        <% @mentors.each do |mentor| %>
+            <div class="user_info">
+                <%= link_to "",  %><img class="profile_avatar" src="http://via.placeholder.com/100x100">
+                <%#= Click to Enlarge %>
+                </a>
+            </div>
+      
+            <div>Name: <% @current_user = User.find( mentor.user_id) %>
+                <%= @current_user.first_name %>
+            </div>
+            <div>Username: <%= @current_user.username %></div>
+           
+            <br>
+            <div> <% @current_user.profile_interest.attributes.each do |interest, value| %> 
+            <%= "#{interest}" if value == true %></div>
+            <% end %>
+           
+        <% end %>
+        
+        <% @mentees.each do |mentee| %>
+            <div class="user_info">
+                <a href="#" class="img_pop"><img class="profile_avatar" src="http://via.placeholder.com/100x100">
+                <%#= Click to Enlarge %>
+                </a>
+            </div>
+      
+            <div>Name: <% @current_user = User.find( mentee.user_id) %>
+            <%= @current_user.first_name %>
+            </div>
+            <div>Username: <%= @current_user.username %></div>
+           
+            <br>
+            <div> <% @current_user.profile_interest.attributes.each do |interest, value| %> 
+            <%= "#{interest}" if value == true %></div>
+            <% end %>
+           
+        <% end %>
+    </ul>
+</div>

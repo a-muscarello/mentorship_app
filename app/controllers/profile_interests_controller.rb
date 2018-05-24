@@ -6,6 +6,7 @@ class ProfileInterestsController < ApplicationController
 
     def show
         @interests = ProfileInterest.find(params[:id])
+        redirect_to '/profile_interests'
     end
 
     def new
@@ -35,7 +36,6 @@ class ProfileInterestsController < ApplicationController
         @interests.destroy
         redirect_to "/profile_interests"
     end
-
 
 
 
