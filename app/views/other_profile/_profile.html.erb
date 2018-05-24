@@ -1,0 +1,14 @@
+
+<div class="user_info" id="profile_<%= @other_user.id %>">
+<a href="#" class="img_pop"><img class="profile_avatar" src="http://via.placeholder.com/100x100"><%# Click to Enlarge %></a>
+<ul>
+    <li class="username"><%= @other_user.username %></li>
+    <li>
+        <% @other_user.profile_interest.attributes.each do |interest, value| %>
+            <% if value == true %>
+                <%= interest %>
+            <% end %>
+        <% end %>
+    </li>
+</ul>
+</div>
