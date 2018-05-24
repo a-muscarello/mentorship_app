@@ -1,31 +1,29 @@
-<div class="main">
-    <h6>Welcome, <%= current_user.first_name %></h6>
-    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-    <div class="jumbotron">
-        <div class="col-sm-4">
-            <h4><%= link_to "Private Chats", private_chat_rooms_path %></h4>
+<div id="message_board_container" class="container-fluid">
+    <div class="row">
 
-        </div>
-        <div class="col-sm-6">
-            <h5>Requests</h5>
-            <table>
-                <% @connections.each do |connection| %>
-                <tr>
-                    <% name = User.find(connection.user_id).username %>
-                    <td><%= name %></td>
-                        <td><%= bootstrap_form_for(connection) do |f| %>
-                            <%= f.select :state, ["accept", "reject"] %>
-                            <%= f.hidden_field :user_id, :value => connection.user_id %>
-                            <%= f.hidden_field :other_user_id, :value => current_user.id %>
-                            <%= f.submit "Submit" %>
-                        <% end %>
-                    </td>
-                </tr>
-                <% end %>
-            </table>
-        </div>
+        <%# private conversations %>
+        <div id="private_convo">
+            <h4><%= link_to "your private conversations", private_chat_rooms_path %></h4>
 
-        <div class="col-sm-6">
+            <div class="">
+                <h5>Requests</h5>
+                <table>
+                    <% @connections.each do |connection| %>
+                    <tr>
+                        <% name = User.find(connection.user_id).username %>
+                        <td><%= name %></td>
+                            <td><%= bootstrap_form_for(connection) do |f| %>
+                                <%= f.select :state, ["accept", "reject"] %>
+                                <%= f.hidden_field :user_id, :value => connection.user_id %>
+                                <%= f.hidden_field :other_user_id, :value => current_user.id %>
+                                <%= f.submit "Submit" %>
+                            <% end %>
+                        </td>
+                    </tr>
+                    <% end %>
+                </table>
+            </div>
+
             <h5>Requested</h5>
             <table>
                 <% @requests.each do |request| %>
@@ -34,34 +32,45 @@
                     <td><%= name %></td>
                     <td><%= request.state %></td>
                 </tr>
+                <% end %>
             </table>
-            <% end %>
+            
+
+            <div id="connect">
+                <h3>Start a conversation</h3>
+                <%= form_for(@connection_request) do |f| %>
+                    <%= f.label "who would you like to chat with?" %>
+                    <%= f.collection_select :other_user_id, @users, :id, :username, prompt: true %>
+                    <%= f.hidden_field :user_id, :value => current_user.id %>
+                    <%= f.hidden_field :state, :value => "pending" %>
+                    <%= f.submit "invite", :class => "invite_btn btn btn-sm btn-warning"  %>
+                <% end %>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <h6>Start a conversation</h6>
-            <%= bootstrap_form_for(@connection_request) do |f| %>
-                <%= f.collection_select :other_user_id, @users, :id, :username, prompt: true %>
-                <%= f.hidden_field :user_id, :value => current_user.id %>
-                <%= f.hidden_field :state, :value => "pending" %>
-                <div class="form-buttons">
-                    <%= f.submit "Request User" %>
+
+        <%# message board %>
+        <div id="message_board">
+            <h1>Hello <%= current_user.first_name %>, Join The Conversation</h1>
+
+            <%= form_for @chat_room do |f| %>
+                <div class="form-group">
+                    <%= f.text_field :title, autofocus: true, class: 'ask form-control', id: "question_input", placeholder: "what's your question" %>
                 </div>
+
+                <%= f.submit "ask the MentorMe community", class: 'ask-btn btn btn-primary' %>
             <% end %>
+
+            <div id="questions_list">
+                <table>
+                    <tbody>
+                        <%= render @chat_rooms %>
+                    </tbody>
+                </table>
+            </div>
+
+            
         </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6">
-            <h4>Question Board</h4>
 
-            <p class="lead"><%= link_to 'Ask New Question', new_chat_room_path, class: 'btn btn-primary' %> </p>
 
-            <table>
-                <%= render @chat_rooms %>
-            </table>
-        </div>
-
-    </div>
-
-</div>
+    </div> <%# end Row %>
+</div> <%# end Container-fluid %>

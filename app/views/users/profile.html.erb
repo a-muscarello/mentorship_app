@@ -7,13 +7,14 @@
         <li class="real_name"><%= @user.first_name %> <%= @user.last_name %></li>
         <li class="username"><%= @user.username %></li>
         <li>
-            <%# for @user.profile_interests.where(true) %>
-
-            <%# end %>
-
             <% @user.profile_interest.attributes.each do |interest, value| %>
                 <%= "#{interest} /" if value == true %>
             <% end %>
         </li>
     </ul>
+</div>
+
+
+<div class="suggestions">
+
 </div>
