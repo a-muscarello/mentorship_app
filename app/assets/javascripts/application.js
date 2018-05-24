@@ -15,7 +15,6 @@
 //= require turbolinks
 //= require jquery
 //= require cable
-//= require jquery_ujs
 //= require jquery.turbolinks
 //= require bootstrap
 //= require_tree .
@@ -31,3 +30,5 @@ $(document).on("ready page:change", function() {
     });
 
 });
+
+

@@ -1,13 +1,23 @@
 class UsersController < ApplicationController
-    skip_before_action :authenticate_user!, :only => [:home]
+    skip_before_action :authenticate_user!, :only => [:home, :show]
 
     def home
+       
+    end
 
+    def show
+        @other_user = User.find_by(params[:id])
     end
 
     def profile
         @user = current_user
-        @interests = ProfileInterest.where(:user_id => current_user.id)
+        @interests = ProfileInterest.find_by(:user_id => current_user.id)
+        @users = User.all
+        if @interests.mentor == true 
+            @results = ProfileInterest.where(:mentee => true)
+        else
+            @results = ProfileInterest.where(:mentor => true)
+        end
     end
 
 
