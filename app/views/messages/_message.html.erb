@@ -6,9 +6,10 @@
             </div>
             <div class="col-md-11">
                 <p class="card-text">
-                    <span class="text-muted"><%= message.user.username %> at <%= message.timestamp %> says</span><br>
+                    <span class="text-muted"><i><%= message.user.username %></i> at <%= message.timestamp %> says</span><br>
                     <%= message.body %>
                 </p>
+                <a class="reply" href="#">reply</a>
             </div>
         </div>
     </div>

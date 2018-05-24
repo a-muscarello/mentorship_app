@@ -1,9 +1,9 @@
 jQuery(document).on 'turbolinks:load', ->
   messages = $('#messages')
   if $('#messages').length > 0
-    messages_to_bottom = -> messages.scrollTop(messages.prop("scrollHeight"))
+    # messages_to_bottom = -> messages.scrollTop(messages.prop("scrollHeight"))
 
-    messages_to_bottom()
+    # messages_to_bottom()
 
     App.global_chat = App.cable.subscriptions.create {
         channel: "ChatRoomsChannel"

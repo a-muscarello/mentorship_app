@@ -1,20 +1,31 @@
-<%= link_to "Back to Home", private_chat_rooms_path %>
-<% if can_see?(@private_chat_room) %>
-    <h1><%= @private_chat_room.title %></h1>
 
-    <div id="private_messages" data-private-chat-room-id="<%= @private_chat_room.id %>">
-        <%= render @private_chat_room.private_messages %>
+<div class="private_chat_page_container">
+    <div class="thread_intro">
+        <button class="btn btn-sm btn-outline-dark back_to_home"><%= link_to "Back to Home", chat_rooms_path %></button>
     </div>
-
-    <hr>
-
-    <%= form_for @private_message, url: '#' do |f| %>
-        <%= hidden_field_tag 'private_chat_room_id', @private_chat_room.id %>
-        <div class="form-group">
-            <%= f.text_area :body, class: 'form-control' %>
-            <small class="text-muted">From 2 to 1000 characters</small>
+    
+    <% if can_see?(@private_chat_room) %>
+        <h1 class="private_chat_title"><%= @private_chat_room.title %></h1>
+    
+        <div class="container single_private_chat_container">
+            <div class="private_messages">
+                <div id="private_messages" data-private-chat-room-id="<%= @private_chat_room.id %>">
+                    <%= render @private_chat_room.private_messages %>
+                </div>
+            
+                <hr>
+            
+                <%= form_for @private_message, url: '#' do |f| %>
+                    <%= hidden_field_tag 'private_chat_room_id', @private_chat_room.id %>
+                    <div class="form-group">
+                        <%= f.text_area :body, class: 'form-control private_message_text_area', placeholder: "type your message" %>
+                        <small class="text-muted">From 2 to 1000 characters</small>
+                    </div>
+            
+                    <%= f.submit "send", class: 'btn btn-sm btn-dark private_send_button' %>
+                <% end %>
+            </div>
         </div>
-
-        <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
     <% end %>
-<% end %>
+</div>
+

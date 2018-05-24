@@ -1,0 +1,48 @@
+
+.thread_page_container {
+    background: rgb(214, 214, 214);
+    background: #fff;
+}
+
+.single_public_thread_container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.thread_intro {
+    margin-left: 25px;
+    .thread_question {
+        margin-top: 25px; 
+    }
+    .back_to_home {
+        margin-top: 10px;
+        transform: translateX(-10px);
+        a {
+            text-decoration: none;
+            color: #999;
+        }
+    }
+}
+
+.answer_text {
+    background: rgb(173, 240, 173);
+    // background: #444;
+    color: #444;
+    padding: 25px;
+}
+
+.card {
+    padding: 25px;
+    span {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        i {
+            color: magenta;
+            font-weight: bold;
+            font-style: normal;
+        }
+    }
+    .reply {
+        float: right;
+    }
+}

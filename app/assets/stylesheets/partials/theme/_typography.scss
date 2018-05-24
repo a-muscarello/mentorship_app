@@ -1,4 +1,8 @@
 
+body {
+    font-family: 'Sunflower', sans-serif;
+}
+
 h2 {
     padding: 25px;
 }
@@ -11,7 +15,7 @@ h2 {
         font-size: .75em;
         // font-weight: bold;
         color: blue;
-        display: inline;
+        display: inline !important;
         margin-right: 25px;
         &:hover {
             color: firebrick;
