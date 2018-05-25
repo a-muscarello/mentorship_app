@@ -43,7 +43,7 @@ Stats are shown when user hovers over image: shown on hover (pix)
 ### **Collectively:**
 Discussed the project scope and drew up a checklist with tasks to be completed, assigning same tasks and drew up datelines.
 Created a user flow of how the app will work. 
-Collaborated on how the final layout.
+Collaborated on how the final layout would look.
 
 
 **Ambika:**
