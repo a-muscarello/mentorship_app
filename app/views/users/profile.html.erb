@@ -7,34 +7,32 @@
             <li class="username"><%= @user.username %></li>
             <li>
                 <% @user.profile_interest.attributes.each do |interest, value| %>
-                    <% if value == true %>
-                        <%= interest %>
+                    <% if interest != "mentor" && interest != "mentee" %>
+                        <%= "#{interest} /" if value == true %>
                     <% end %>
                 <% end %>
             </li>
         </ul>
     </div>
-
+<%= render "other_profile/modal" %>
 
     <div class="suggestions">
         <ul>
-            
+
             <% @results.each do |result| %>
                 <li>
                     <div class="user_info">
                     <a href="#" class="img_pop"><img class="profile_avatar" src="http://via.placeholder.com/100x100"><%# Click to Enlarge %></a>
                     </div>
-            
+
                    <% other_user = User.find(result.user_id) %>
-                  
-                    <div>Username: <%= other_user.username %></div>
-                
-                    <%= link_to 'View Profile', users_show_path(other_user), remote: true, :class => 'btn btn-sm btn-secondary' %>
+
+                    <%= link_to "#{other_user.username}", users_show_path(id: other_user.id), remote: true, :class => 'btn btn-sm btn-secondary' %>
                     <br>
-                    <div> 
+                    <div>
                     <% other_user.profile_interest.attributes.each do |interest, value| %>
-                        <% if value == true %>
-                            <%= interest %>
+                        <% if interest != "mentor" && interest != "mentee" %>
+                            <%= "#{interest} /" if value == true %>
                         <% end %>
                     <% end %>
                     </div>
@@ -48,5 +46,3 @@
         </ul>
     </div>
 </div>
-
-<%= render "other_profile/modal" %>
