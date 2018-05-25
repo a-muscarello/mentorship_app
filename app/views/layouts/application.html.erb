@@ -23,15 +23,18 @@
                 <% if user_signed_in? %>
         
                   <li class="dropdown">
-                      <a id="userDropdown" class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      <%= current_user.first_name %>
-                      <span class="caret"></span>
-                      </a>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="userDropdown">
-                          <div class="dropdown-divider"></div>
-                          <li class="dropdown-item"><%= link_to 'Profile', users_profile_path, :class => 'nav-link' %></li>
-                          <li class="dropdown-item"><%= link_to 'Log out', destroy_user_session_path, method: :delete, :class => 'nav-link' %></li>                
-                      </ul>
+                        <a id="userDropdown" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <%= current_user.first_name %>
+                        <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="userDropdown">
+                            <div class="dropdown-divider"></div>
+                            <li class="dropdown-item"><%= link_to 'Profile', users_profile_path, :class => 'nav-link' %></li>
+                            <li class="dropdown-item"><%= link_to 'Log out', destroy_user_session_path, method: :delete, :class => 'nav-link' %></li>                
+                        </ul>
+                  </li>
+                  <li class="nav-item message_board">
+                        <a href="/chat_rooms"><button class="btn btn-sm btn-outline-dark message_board_button">the great message board</button></a>
                   </li>
 
                 <% else %>

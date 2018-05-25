@@ -1,23 +1,23 @@
 
 <h2>Tell Us About Your Interests</h2>
 
-<div class="background">
+<div class="profile_interests_background">
     <div class="container">
         <div class="interests_form">
             <%= bootstrap_form_for @interests do |f| %>
     
                 <div class="interests">
                     <h2>You're into... (check all that apply)</h2>
-                    <%= f.radio_button :python, true, label: "Python" %>
-                    <%= f.radio_button :javascript, true, label: "JavaScript" %>
-                    <%= f.radio_button :react, true, label: "React" %>
-                    <%= f.radio_button :rails, true, label: "Rails" %>
-                    <%= f.radio_button :sql, true, label: "SQL" %>
-                    <%= f.radio_button :java, true, label: "Java" %>
-                    <%= f.radio_button :node_js, true, label: "NodeJS" %>
-                    <%= f.radio_button :scss, true, label: "Sass & SCSS" %>
-                    <%= f.radio_button :data_scraping, true, label: "Data Scraping" %>
-                    <%= f.radio_button :blockchain, true, label: "Blockchain" %>
+                    <%= f.check_box :python, label: "Python" %>
+                    <%= f.check_box :javascript, label: "JavaScript" %>
+                    <%= f.check_box :react, label: "React" %>
+                    <%= f.check_box :rails, label: "Rails" %>
+                    <%= f.check_box :sql, label: "SQL" %>
+                    <%= f.check_box :java, label: "Java" %>
+                    <%= f.check_box :node_js, label: "NodeJS" %>
+                    <%= f.check_box :scss, label: "Sass & SCSS" %>
+                    <%= f.check_box :data_scraping, label: "Data Scraping" %>
+                    <%= f.check_box :blockchain, label: "Blockchain" %>
                 </div>
     
                 <div class="interests">
