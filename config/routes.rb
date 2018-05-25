@@ -9,6 +9,7 @@ Rails.application.routes.draw do
         registrations: 'users/registrations'
     }
 
+    get 'profile_interests/ratings', to: 'profile_interests#ratings'
     resources :profile_interests
     resources :chat_rooms, only: [:new, :create, :show, :index]
     resources :private_chat_rooms, only: [:new, :create, :show, :index]

@@ -35,13 +35,18 @@ class ProfileInterestsController < ApplicationController
         redirect_to "/profile_interests"
     end
 
-
-
+    def ratings
+        @user = ProfileInterest.find(params[:id])
+        score_update = @user.score + 1
+        @user.update_attribute(:score, score_update)
+        puts @user
+    end
+    
 
     private
 
     def interests_params
-        params.require(:profile_interest).permit(:user_id, :python, :rails, :react, :node_js, :sql, :blockchain, :data_scraping, :javascript, :java, :scss, :mentee, :mentor)
+        params.require(:profile_interest).permit(:user_id, :python, :rails, :react, :node_js, :sql, :blockchain, :data_scraping, :javascript, :java, :scss, :mentee, :mentor, :score)
     end
 
 end
