@@ -1,7 +1,7 @@
 # **Mentorship App**
 Created using Ruby 2.5.1
 
-Group Project for the New York + Code Academy's inaugural cohort of the NYC Tech Talent Pipeline's Web Development Fellowship Program 2018. Collaboration by Ambika Muscarello, Danielle Danskin and Francis Agbodji.
+Group Project for the New York + Code Academy's inaugural cohort of the NYC Tech Talent Pipeline's Web Development Fellowship Program 2018.  Collaboration by Ambika Muscarello, Danielle Danskin and Francis Agbodji.
 
 Designing a mentorship matching app, that would allow mentors to provide their services to mentees for free.  At this time, this mentorship app will provide mentorship for technology areas such as Python, React, Node JS etc.  We foresee an expansion to other fields in the future.
 
