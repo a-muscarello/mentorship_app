@@ -45,8 +45,15 @@
                     <% end %>
                     </div>
                     <div><% if @user.profile_interest[:mentee] && can_score?(other_user.id) %>
-                    <%= link_to "thumbs up", profile_interests_ratings_path(id: other_user.id), remote: true, :class => 'btn btn-sm btn-secondary' %>
-                    <button class="ranking_btn" value="0">thumbs down</button>
+                    <div class="recommend">
+                        Recommend  
+                        <%= link_to "", profile_interests_ratings_path(id: other_user.id), remote: true, :class => 'fa fa-thumbs-o-up' %>
+                    </div>
+                    <div class="ignore">
+                        Ignore
+                        <%= link_to "", profile_interests_ratings_path(id: other_user.id), remote: true, :class => 'fa fa-thumbs-o-down' %>
+                    </div>
+                   
                     <% end %>
                     </div>
                 </li>
