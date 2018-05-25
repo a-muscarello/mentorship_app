@@ -71,11 +71,13 @@ Created a Github repository for the project, added collaborators and merging pul
 Created a profile interest database.
 Added page views for user and profile interest.
 Compiled the README.
+
 Danielle:
 Drew out a framework for the database Entity Relationship Diagram (ERD) with the various relationships in place.
 Added Devise for authentication.
 Integrated Action Cable into the project, in essence creating and adding the entire chat functionality to the app.
 Created ability to pull suggestions by interests.
+
 Francis:
 Transferred the wireframe to Photoshop and created mock-ups.
 Created the design for the entire app.
