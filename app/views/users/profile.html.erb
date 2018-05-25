@@ -35,7 +35,7 @@
                     <% end %>
                     </div>
                     <div><% if @user.profile_interest[:mentee] && can_score?(other_user.id) %>
-                    <button class="ranking_btn" value="1">Like</button>
+                    <%= link_to "Recommend", profile_interests_ratings_path(id: other_user.id), remote: true, :class => 'btn btn-sm btn-secondary' %>
                     <button class="ranking_btn" value="0">Dislike</button>
                     <% end %>
                     </div>
