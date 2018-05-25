@@ -77,6 +77,8 @@ Users are able to edit their profiles, see a list of mentors/mentees populated a
 Clicking on a mentor profile generates a modal with profile displayed.
 Once request has been made, user waits for the other party to accept/decline the request. 
 When request is accepted, both users move into a private chat room.
+![chat_btw_mike_and_elton](https://user-images.githubusercontent.com/29616111/40560192-41db8028-6027-11e8-8f1e-2a7541f40ee7.png)
+
 Chat conversation will be shown in their profile pages.
 Mentees have ability to like a mentor. The button for this will only appear after a chat session.
 
