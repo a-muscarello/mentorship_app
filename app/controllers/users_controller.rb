@@ -18,6 +18,7 @@ class UsersController < ApplicationController
         else
             @results = ProfileInterest.where(:mentor => true)
         end
+        @connection_request = ConnectionRequest.new
     end
 
 

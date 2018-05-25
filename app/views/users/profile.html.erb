@@ -27,6 +27,16 @@
 
                     <%= link_to "#{other_user.username}", users_show_path(id: other_user.id), remote: true, :class => 'btn btn-sm btn-secondary' %>
                     <br>
+                    <div id="connect">
+                    <h3>Start a conversation</h3>
+                    <%= form_for(@connection_request) do |f| %>
+
+                        <%= f.hidden_field :other_user_id, :value => other_user.id %>
+                        <%= f.hidden_field :user_id, :value => current_user.id %>
+                        <%= f.hidden_field :state, :value => "pending" %>
+                        <%= f.submit "Connect", :class => "invite_btn btn btn-sm btn-outline-dark"  %>
+                    <% end %>
+                    </div>
                     <div>
                     <% other_user.profile_interest.attributes.each do |interest, value| %>
                         <% if interest != "mentor" && interest != "mentee" %>
@@ -35,8 +45,8 @@
                     <% end %>
                     </div>
                     <div><% if @user.profile_interest[:mentee] && can_score?(other_user.id) %>
-                    <%= link_to "Recommend", profile_interests_ratings_path(id: other_user.id), remote: true, :class => 'btn btn-sm btn-secondary' %>
-                    <button class="ranking_btn" value="0">Dislike</button>
+                    <%= link_to "thumbs up", profile_interests_ratings_path(id: other_user.id), remote: true, :class => 'btn btn-sm btn-secondary' %>
+                    <button class="ranking_btn" value="0">thumbs down</button>
                     <% end %>
                     </div>
                 </li>
