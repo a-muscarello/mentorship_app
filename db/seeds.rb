@@ -9,12 +9,12 @@
 
 
 
-User.create(first_name: "Lisa", last_name: "Simpson", username: "@littlelisa", email: "lisa@email.com", password: "test123")
-User.create(first_name: "Mike", last_name: "Tyson", username: "@ironmike", email: "ironmike@email.com", password: "test123")
-User.create(first_name: "Elvis", last_name: "Presley", username: "@thegreatelvis", email: "elvis@lasvegas.com", password: "elvis123")
-ProfileInterest.create(user_id: 1, python: false, rails: true, react: false, node_js: false, sql: true, blockchain: false, data_scraping: true, java: false, javascript: true, scss: false, mentor: true, mentee: false)
-ProfileInterest.create(user_id: 2, python: true, rails: true, react: true, node_js: false, sql: true, blockchain: false, data_scraping: true, java: false, javascript: true, scss: false, mentor: false, mentee: true)
-ProfileInterest.create(user_id: 3, python: true, rails: false, react: true, node_js: false, sql: true, blockchain: true, data_scraping: true, java: true, javascript: true, scss: false, mentor: true, mentee: false)
+# User.create(first_name: "Lisa", last_name: "Simpson", username: "@littlelisa", email: "lisa@email.com", password: "test123")
+# User.create(first_name: "Mike", last_name: "Tyson", username: "@ironmike", email: "ironmike@email.com", password: "test123")
+# User.create(first_name: "Elvis", last_name: "Presley", username: "@thegreatelvis", email: "elvis@lasvegas.com", password: "elvis123")
+# ProfileInterest.create(user_id: 1, python: false, rails: true, react: false, node_js: false, sql: true, blockchain: false, data_scraping: true, java: false, javascript: true, scss: false, mentor: true, mentee: false)
+# ProfileInterest.create(user_id: 2, python: true, rails: true, react: true, node_js: false, sql: true, blockchain: false, data_scraping: true, java: false, javascript: true, scss: false, mentor: false, mentee: true)
+# ProfileInterest.create(user_id: 3, python: true, rails: false, react: true, node_js: false, sql: true, blockchain: true, data_scraping: true, java: true, javascript: true, scss: false, mentor: true, mentee: false)
 
 # ChatRoom.create(user_id: 1, title: "How Do You Make A Million Dollars?")
 # ChatRoom.create(user_id: 3, title: "How Do You Get Hired As A Developer?")
@@ -28,3 +28,28 @@ ProfileInterest.create(user_id: 3, python: true, rails: false, react: true, node
 # ChatRoom.create(user_id: 1, title: "When was Quora founded, is MentorMe better?")
 # ChatRoom.create(user_id: 2, title: "What's the toughest challenge you've faced in your software development career?")
 # ChatRoom.create(user_id: 2, title: "Is it bad for new programmers to be afraid to break code?")
+
+
+
+User.create(first_name: "Lisa", last_name: "Simpson", username: "@littlelisa", email: "lisa@email.com", password: "test123")
+User.create(first_name: "Mike", last_name: "Tyson", username: "@ironmike", email: "ironmike@email.com", password: "test123")
+User.create(first_name: "Elvis", last_name: "Presley", username: "@thegreatelvis", email: "elvis@lasvegas.com", password: "elvis123")
+ProfileInterest.create(user_id: 10, python: false, rails: true, react: false, node_js: false, sql: true, blockchain: false, data_scraping: false, java: true, javascript: true, scss: false, mentor: true, mentee: false)
+ProfileInterest.create(user_id: 11, python: true, rails: true, react: true, node_js: false, sql: true, blockchain: false, data_scraping: true, java: false, javascript: false, scss: false, mentor: false, mentee: true)
+ProfileInterest.create(user_id: 12, python: true, rails: false, react: true, node_js: false, sql: false, blockchain: true, data_scraping: true, java: true, javascript: true, scss: true, mentor: true, mentee: false)
+
+
+User.create(first_name: "May", last_name: "Wong", username: "@maymay", email: "may@email.com", password: "test123")
+User.create(first_name: "Tom", last_name: "Brown", username: "@brownie", email: "tommy@email.com", password: "test123")
+User.create(first_name: "John", last_name: "Snow", username: "@winterishere", email: "johnsnow@lasvegas.com", password: "elvis123")
+ProfileInterest.create(user_id: 13, python: false, rails: true, react: true, node_js: false, sql: true, blockchain: false, data_scraping: true, java: false, javascript: true, scss: false, mentor: true, mentee: false)
+ProfileInterest.create(user_id: 14, python: true, rails: false, react: true, node_js: false, sql: false, blockchain: false, data_scraping: true, java: false, javascript: true, scss: true, mentor: false, mentee: true)
+ProfileInterest.create(user_id: 15, python: true, rails: false, react: true, node_js: false, sql: false, blockchain: true, data_scraping: true, java: true, javascript: false, scss: false, mentor: true, mentee: false)
+
+
+User.create(first_name: "Joe", last_name: "Smith", username: "@joey2", email: "joe@email.com", password: "test123")
+User.create(first_name: "Sam", last_name: "Little", username: "@lilsam", email: "samlit@email.com", password: "test123")
+User.create(first_name: "Carly", last_name: "Dane", username: "@greatdane", email: "carly@lasvegas.com", password: "elvis123")
+ProfileInterest.create(user_id: 16, python: false, rails: true, react: false, node_js: false, sql: false, blockchain: false, data_scraping: false, java: true, javascript: true, scss: false, mentor: true, mentee: false)
+ProfileInterest.create(user_id: 17, python: true, rails: true, react: true, node_js: false, sql: false, blockchain: false, data_scraping: true, java: true, javascript: false, scss: false, mentor: false, mentee: true)
+ProfileInterest.create(user_id: 18, python: true, rails: false, react: true, node_js: false, sql: true, blockchain: true, data_scraping: true, java: false, javascript: true, scss: false, mentor: false, mentee: true)

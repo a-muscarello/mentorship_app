@@ -11,58 +11,73 @@
                     <%= "#{interest} /" %>
                 <% end %>
             </li>
-            <li><p>About Me: I am a web developer looking to build my community.
-                My interests are above, I love meeting new people. Aside from tech,
-                I also love dogs, hiking, and traveling! message me if you would
-                like to chat about any of those topics or if you live int he NYC
-                area and would like to meet up to talk tech!<p>
+            <li class="user_blurb">
+                <p>
+                    About Me: I am a web developer looking to build my community.
+                    My interests are above, I love meeting new people. Aside from tech,
+                    I also love dogs, hiking, and traveling! message me if you would
+                    like to chat about any of those topics or if you live int he NYC
+                    area and would like to meet up to talk tech!
+                <p>
+            </li>
         </ul>
     </div>
 <%= render "other_profile/modal" %>
 
     <div class="suggestions">
-        <ul>
+        <h3>suggestions</h3>
+        <ul class="matches">
             <% @matches.each do |match| %>
                 <li>
-                    <div class="user_info">
-                    <a href="#" class="img_pop"><img class="profile_avatar" src="http://via.placeholder.com/100x100"><%# Click to Enlarge %></a>
-                    </div>
-
-                   <% other_user = User.find(match.user_id) %>
-
-                    <%= link_to "#{other_user.username}", users_show_path(id: other_user.id), remote: true, :class => 'btn btn-sm btn-secondary' %>
-                    <br>
-                    <div id="connect">
-                    <h3>Start a conversation</h3>
-                    <%= form_for(@connection_request) do |f| %>
-
-                        <%= f.hidden_field :other_user_id, :value => other_user.id %>
-                        <%= f.hidden_field :user_id, :value => current_user.id %>
-                        <%= f.hidden_field :state, :value => "pending" %>
-                        <%= f.submit "Connect", :class => "invite_btn btn btn-sm btn-outline-dark"  %>
-                    <% end %>
-                    </div>
-                    <div>
-                    <% other_user.profile_interest.attributes.each do |interest, value| %>
-                        <% if interest != "mentor" && interest != "mentee" %>
-                            <%= "#{interest} /" if value == true %>
-                        <% end %>
-                    <% end %>
-                    </div>
-                    <div><% if @user.profile_interest[:mentee] && can_score?(other_user.id) %>
-                    <div class="recommend">
-                        Recommend
-                        <%= link_to "", profile_interests_ratings_path(id: other_user.id), remote: true, :class => 'fa fa-thumbs-o-up' %>
-                    </div>
-                    <div class="ignore">
-                        Ignore
-                        <%= link_to "", profile_interests_ratings_path(id: other_user.id), remote: true, :class => 'fa fa-thumbs-o-down' %>
-                    </div>
-
-                    <% end %>
+                    <div class="suggested_user_item">
+                        <div class="suggested_user">
+                            <div class="suggested_user_info">
+                                <a href="#"><img class="suggested_profile_avatar" src="http://via.placeholder.com/50x50"></a>
+                            </div>
+        
+                            <% other_user = User.find(match.user_id) %>
+        
+                            <%= link_to "#{other_user.username}", users_show_path(id: other_user.id), remote: true, :class => 'btn btn-sm btn-secondary' %>
+                            
+                            <div class="suggested_user_interests">
+                                <% other_user.profile_interest.attributes.each do |interest, value| %>
+                                    <% if interest != "mentor" && interest != "mentee" %>
+                                        <%= "#{interest} /" if value == true %>
+                                    <% end %>
+                                <% end %>
+                            </div>
+                        </div>
+                        
+                        <div class="connect_upvote">
+                            <div id="connect">
+                                <%# <h6>start a convo</h6> %>
+                                <%= form_for(@connection_request) do |f| %>
+        
+                                    <%= f.hidden_field :other_user_id, :value => other_user.id %>
+                                    <%= f.hidden_field :user_id, :value => current_user.id %>
+                                    <%= f.hidden_field :state, :value => "pending" %>
+                                    <%= f.submit "Connect with #{other_user.first_name}", :class => "invite_btn invite_suggested btn btn-sm btn-success"  %>
+                                <% end %>
+                            </div>
+                            <div>
+                                <% if @user.profile_interest[:mentee] && can_score?(other_user.id) %>
+                                    <div class="recommend">
+                                        Recommend
+                                        <%= link_to "", profile_interests_ratings_path(id: other_user.id), remote: true, :class => 'fa fa-thumbs-o-up' %>
+                                    </div>
+                                    <div class="ignore">
+                                        Ignore
+                                        <%= link_to "", profile_interests_ratings_path(id: other_user.id), remote: true, :class => 'fa fa-thumbs-o-down' %>
+                                    </div>
+                                <% end %>
+                            </div>
+                        </div>
                     </div>
                 </li>
             <% end %>
         </ul>
     </div>
 </div>
+
+
+<img class="togetherness_plant" src="/assets/togetherness_plant.png" alt="togetherness plant">
