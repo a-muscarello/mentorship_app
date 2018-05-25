@@ -6,10 +6,9 @@
             <li class="real_name"><%= @user.first_name %> <%= @user.last_name %></li>
             <li class="username"><%= @user.username %></li>
             <li>
-                <% @user.profile_interest.attributes.each do |interest, value| %>
-                    <% if interest != "mentor" && interest != "mentee" %>
-                        <%= "#{interest} /" if value == true %>
-                    <% end %>
+                <% matched_interests(@user.profile_interest, @results) %>
+                <% @user_interests.each do |interest| %>
+                    <%= "#{interest} /" %>
                 <% end %>
             </li>
         </ul>
@@ -18,14 +17,13 @@
 
     <div class="suggestions">
         <ul>
-
-            <% @results.each do |result| %>
+            <% @matches.each do |match| %>
                 <li>
                     <div class="user_info">
                     <a href="#" class="img_pop"><img class="profile_avatar" src="http://via.placeholder.com/100x100"><%# Click to Enlarge %></a>
                     </div>
 
-                   <% other_user = User.find(result.user_id) %>
+                   <% other_user = User.find(match.user_id) %>
 
                     <%= link_to "#{other_user.username}", users_show_path(id: other_user.id), remote: true, :class => 'btn btn-sm btn-secondary' %>
                     <br>
