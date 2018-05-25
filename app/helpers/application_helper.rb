@@ -32,7 +32,6 @@ module ApplicationHelper
                 end
             end
         end
-        @matches = matches.uniq
-
+        @matches = matches.uniq.sort!{ |a,b| b.score <=> a.score }
     end
 end
