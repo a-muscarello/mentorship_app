@@ -1,11 +1,8 @@
-# README
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
-
-* Ruby version
 
 * System dependencies
 
@@ -100,6 +97,8 @@ Mentees have ability to like a mentor. The button for this will only appear afte
 
 
 Main login / signup page
+![screen shot 2018-05-24 at 10 50 11 pm](https://user-images.githubusercontent.com/29616111/40524310-f2295fac-5fa7-11e8-8dfa-edb686eecd39.png)
+
 
 Navigational arrow buttons
 Materialize Preloader shows when AJAX calls are being made
