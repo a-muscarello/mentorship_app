@@ -1,6 +1,8 @@
 # **Mentorship App**
 Created using Ruby 2.5.1
 
+Group Project for the New York + Code Academy's inaugural cohort of the NYC Tech Talent Pipeline's Web Development Fellowship. Collaboration by Ambika Muscarello, Danielle Danskin and Francis Agbodji.
+
 Designing a mentorship matching app, that would allow mentors to provide their services to mentees for free.  At this time, this mentorship app will provide mentorship for technology areas such as Python, React, Node JS etc.  We foresee an expansion to other fields in the future.
 
 ### **MVP**
@@ -35,6 +37,7 @@ Users will have the ability to rank mentors.
 
 
 Main login / signup page
+
 ![screen shot 2018-05-24 at 10 50 11 pm](https://user-images.githubusercontent.com/29616111/40547634-75e8aa02-6000-11e8-883b-64e952b41d26.png)
 
 
@@ -72,15 +75,18 @@ Main login / signup page
 
 - Users signup for an account to gain access to services.
 - Users have the ability to select interest topics as well as option of being a 'mentor' or/and 'mentee'.
+
 ![screen shot 2018-05-24 at 10 53 07 pm](https://user-images.githubusercontent.com/29616111/40548053-9be0836e-6001-11e8-954b-9df900b6d4e0.png)
 
 - Message board appears on profile page.
 - Users are able to edit their profiles, see a list of mentors/mentees populated according to their earlier selection, view mentor/mentees respective profiles, request a private chat.
+
 ![screen shot 2018-05-24 at 10 59 12 pm](https://user-images.githubusercontent.com/29616111/40548194-06760fb4-6002-11e8-92e4-94f28b6343ac.png)
 
 - Clicking on a mentor profile generates a modal with profile displayed.
 - Once request has been made, user waits for the other party to accept/decline the request. 
 - When request is accepted, both users move into a private chat room.
+
 ![chat_btw_mike_and_elton](https://user-images.githubusercontent.com/29616111/40560192-41db8028-6027-11e8-8f1e-2a7541f40ee7.png)
 
 - Chat conversation will be shown in their profile pages.
