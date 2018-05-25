@@ -11,6 +11,11 @@
                     <%= "#{interest} /" %>
                 <% end %>
             </li>
+            <li><p>About Me: I am a web developer looking to build my community.
+                My interests are above, I love meeting new people. Aside from tech,
+                I also love dogs, hiking, and traveling! message me if you would
+                like to chat about any of those topics or if you live int he NYC
+                area and would like to meet up to talk tech!<p>
         </ul>
     </div>
 <%= render "other_profile/modal" %>
@@ -46,14 +51,14 @@
                     </div>
                     <div><% if @user.profile_interest[:mentee] && can_score?(other_user.id) %>
                     <div class="recommend">
-                        Recommend  
+                        Recommend
                         <%= link_to "", profile_interests_ratings_path(id: other_user.id), remote: true, :class => 'fa fa-thumbs-o-up' %>
                     </div>
                     <div class="ignore">
                         Ignore
                         <%= link_to "", profile_interests_ratings_path(id: other_user.id), remote: true, :class => 'fa fa-thumbs-o-down' %>
                     </div>
-                   
+
                     <% end %>
                     </div>
                 </li>
