@@ -1,24 +1,4 @@
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 Mentorship App
 Created using Ruby 2..5.1
 
@@ -57,8 +37,6 @@ Main login / signup page
 ![screen shot 2018-05-24 at 10 50 11 pm](https://user-images.githubusercontent.com/29616111/40547634-75e8aa02-6000-11e8-883b-64e952b41d26.png)
 
 
-Stats are hidden by default: default hidden (pix)
-
 Stats are shown when user hovers over image: shown on hover (pix)
 
 
@@ -66,9 +44,8 @@ Collaboration
 Collectively:
 Discussed the project scope and drew up a checklist with tasks to be completed, assigning same tasks and drew up datelines.
 Created a user flow of how the app will work. 
+Collaborated on how the final layout.
 
-Incorporated and made adjustments to spotlight code to work with existing elements
-Used Flexbox within Flexbox to correctly align elements to work across a variety of viewport widths
 
 Ambika:
 Created a Github repository for the project, added collaborators and merging pull requests.
@@ -90,9 +67,8 @@ Integrated the routes for the app.
 
 
 Features:
-
-Users have the ability to login into their profile page. New users signup for an account to gain access to services.
-Users have the ability to select interest topics as well as option of being a 'mentor' or/and 'mentee'.
+Users signup for an account to gain access to services.
+They have the ability to select interest topics as well as option of being a 'mentor' or/and 'mentee'.
 Message board appears on profile page.
 Users are able to edit their profiles, see a list of mentors/mentees populated according to their earlier selection, view mentor/mentees respective profiles, request a private chat.
 Clicking on a mentor profile generates a modal with profile displayed.
@@ -100,6 +76,8 @@ Once request has been made, user waits for the other party to accept/decline the
 When request is accepted, both users move into a private chat room.
 Chat conversation will be shown in their profile pages.
 Mentees have ability to like a mentor. The button for this will only appear after a chat session.
+
+Stats are hidden by default: default hidden (pix)
 
 
 Navigational arrow buttons
