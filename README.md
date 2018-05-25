@@ -36,9 +36,6 @@ Main login / signup page
 ![screen shot 2018-05-24 at 10 50 11 pm](https://user-images.githubusercontent.com/29616111/40547634-75e8aa02-6000-11e8-883b-64e952b41d26.png)
 
 
-Stats are shown when user hovers over image: shown on hover (pix)
-
-
 ## **Collaboration**
 ### **Collectively:**
 Discussed the project scope and drew up a checklist with tasks to be completed, assigning same tasks and drew up datelines.
@@ -81,8 +78,6 @@ When request is accepted, both users move into a private chat room.
 
 Chat conversation will be shown in their profile pages.
 Mentees have ability to like a mentor. The button for this will only appear after a chat session.
-
-Stats are hidden by default: default hidden (pix)
 
 
 ## **Acknowledgements:**
