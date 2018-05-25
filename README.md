@@ -75,6 +75,7 @@ They have the ability to select interest topics as well as option of being a 'me
 Message board appears on profile page.
 Users are able to edit their profiles, see a list of mentors/mentees populated according to their earlier selection, view mentor/mentees respective profiles, request a private chat.
 Clicking on a mentor profile generates a modal with profile displayed.
+
 Once request has been made, user waits for the other party to accept/decline the request. 
 When request is accepted, both users move into a private chat room.
 Chat conversation will be shown in their profile pages.
