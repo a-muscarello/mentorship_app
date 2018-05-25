@@ -5,7 +5,7 @@ jQuery(document).on 'turbolinks:load', ->
 
     messages_to_bottom()
 
-    App.global_chat = App.cable.subscriptions.create {
+    App.private_chat_room = App.cable.subscriptions.create {
         channel: "PrivateChatRoomsChannel"
         private_chat_room_id: private_messages.data('private-chat-room-id')
       },
@@ -27,7 +27,7 @@ jQuery(document).on 'turbolinks:load', ->
       $this = $(this)
       textarea = $this.find('#private_message_body')
       if $.trim(textarea.val()).length > 1
-        App.global_chat.send_message textarea.val(), private_messages.data('private-chat-room-id')
+        App.private_chat_room.send_message textarea.val(), private_messages.data('private-chat-room-id')
         textarea.val('')
       e.preventDefault()
       return false
