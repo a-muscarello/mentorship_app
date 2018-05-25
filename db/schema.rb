@@ -62,18 +62,18 @@ ActiveRecord::Schema.define(version: 2018_05_24_183012) do
 
   create_table "profile_interests", force: :cascade do |t|
     t.integer "user_id"
-    t.boolean "python"
-    t.boolean "rails"
-    t.boolean "react"
-    t.boolean "node_js"
-    t.boolean "sql"
-    t.boolean "blockchain"
-    t.boolean "data_scraping"
-    t.boolean "java"
-    t.boolean "javascript"
-    t.boolean "scss"
-    t.boolean "mentor"
-    t.boolean "mentee"
+    t.boolean "python", default: false
+    t.boolean "rails", default: false
+    t.boolean "react", default: false
+    t.boolean "node_js", default: false
+    t.boolean "sql", default: false
+    t.boolean "blockchain", default: false
+    t.boolean "data_scraping", default: false
+    t.boolean "java", default: false
+    t.boolean "javascript", default: false
+    t.boolean "scss", default: false
+    t.boolean "mentor", default: false
+    t.boolean "mentee", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "score", default: 0

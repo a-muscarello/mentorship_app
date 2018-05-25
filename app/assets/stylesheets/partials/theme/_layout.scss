@@ -2,3 +2,14 @@
 .container {
     padding-bottom: 100px;
 }
+
+.suggestions {
+    ul {
+        list-style-type: none;
+    }
+}
+
+.profile_modal{
+    display: flex;
+    flex-wrap: wrap;
+}
