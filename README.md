@@ -53,6 +53,10 @@ SCSS
 Photoshop
 
 
+Main login / signup page
+![screen shot 2018-05-24 at 10 50 11 pm](https://user-images.githubusercontent.com/29616111/40547634-75e8aa02-6000-11e8-883b-64e952b41d26.png)
+
+
 Stats are hidden by default: default hidden (pix)
 
 Stats are shown when user hovers over image: shown on hover (pix)
@@ -96,10 +100,6 @@ Once request has been made, user waits for the other party to accept/decline the
 When request is accepted, both users move into a private chat room.
 Chat conversation will be shown in their profile pages.
 Mentees have ability to like a mentor. The button for this will only appear after a chat session.
-
-
-Main login / signup page
-![screen shot 2018-05-24 at 10 50 11 pm](https://user-images.githubusercontent.com/29616111/40524310-f2295fac-5fa7-11e8-8dfa-edb686eecd39.png)
 
 
 Navigational arrow buttons
