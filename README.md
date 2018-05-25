@@ -69,6 +69,9 @@ Integrated the routes for the app.
 Features:
 Users signup for an account to gain access to services.
 They have the ability to select interest topics as well as option of being a 'mentor' or/and 'mentee'.
+
+![screen shot 2018-05-24 at 10 53 07 pm](https://user-images.githubusercontent.com/29616111/40548053-9be0836e-6001-11e8-954b-9df900b6d4e0.png)
+
 Message board appears on profile page.
 Users are able to edit their profiles, see a list of mentors/mentees populated according to their earlier selection, view mentor/mentees respective profiles, request a private chat.
 Clicking on a mentor profile generates a modal with profile displayed.
