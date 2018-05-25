@@ -14,6 +14,7 @@ class UsersController < ApplicationController
         @users = User.all
         if @interests.mentor == true
             @results = ProfileInterest.where(:mentee => true)
+            
         else
             @results = ProfileInterest.where(:mentor => true)
         end

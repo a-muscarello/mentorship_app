@@ -13,5 +13,26 @@ module ApplicationHelper
         end
         return false
     end
-end
 
+    def matched_interests(current_profile, other_profiles)
+        @user_interests = []
+        matches = []
+
+        @user.profile_interest.attributes.each do |interest, value|
+            if interest != "mentor" && interest != "mentee"
+                if value == true
+                    @user_interests = @user_interests.push(interest)
+                end
+            end
+        end
+        other_profiles.each do |profile|
+            @user_interests.each do |interest|
+                if profile[interest] == true
+                    matches = matches.push(profile)
+                end
+            end
+        end
+        @matches = matches.uniq
+
+    end
+end
