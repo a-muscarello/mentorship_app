@@ -35,6 +35,10 @@ Users will have the ability to rank mentors.
 - SCSS
 - Photoshop
 
+https://mentor-matching-app.herokuapp.com/ 
+
+email : test@email.com
+password : test1234
 
 Main login / signup page
 
